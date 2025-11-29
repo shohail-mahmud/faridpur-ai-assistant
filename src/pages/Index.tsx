@@ -109,9 +109,9 @@ const Index = () => {
     }
   }, [messages, isTyping]);
 
-  const callAI = async (message: string): Promise<string | null> => {
+  const callAI = async (message: string, retryCount = 0): Promise<string | null> => {
     const controller = new AbortController();
-    const timeout = setTimeout(() => controller.abort(), 12000);
+    const timeout = setTimeout(() => controller.abort(), 30000);
 
     try {
       const response = await fetch('https://text.pollinations.ai/', {
@@ -134,8 +134,15 @@ const Index = () => {
 
       const text = await response.text();
       return text?.length > 10 ? text : null;
-    } catch {
+    } catch (error) {
       clearTimeout(timeout);
+      
+      // Retry once if first attempt fails
+      if (retryCount === 0) {
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        return callAI(message, 1);
+      }
+      
       return null;
     }
   };
