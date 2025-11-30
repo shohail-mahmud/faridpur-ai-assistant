@@ -6,9 +6,10 @@ import { Input } from './ui/input';
 interface ChatInputProps {
   onSendMessage: (message: string) => void;
   isProcessing: boolean;
+  language?: 'bn' | 'en';
 }
 
-export const ChatInput = ({ onSendMessage, isProcessing }: ChatInputProps) => {
+export const ChatInput = ({ onSendMessage, isProcessing, language = 'bn' }: ChatInputProps) => {
   const [message, setMessage] = useState('');
 
   const handleSubmit = (e: FormEvent) => {
@@ -36,7 +37,7 @@ export const ChatInput = ({ onSendMessage, isProcessing }: ChatInputProps) => {
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             onKeyDown={handleKeyDown}
-            placeholder="প্রশ্ন লিখুন..."
+            placeholder={language === 'bn' ? 'প্রশ্ন লিখুন...' : 'Ask a question...'}
             className="flex-1 bg-transparent border-0 focus-visible:ring-0 focus-visible:ring-offset-0 text-sm placeholder:text-muted-foreground"
             maxLength={500}
             autoComplete="off"
@@ -53,7 +54,7 @@ export const ChatInput = ({ onSendMessage, isProcessing }: ChatInputProps) => {
       </form>
       <div className="flex items-center justify-center gap-3 mt-3 text-xs text-muted-foreground">
         <span>
-          Developed by{' '}
+          {language === 'bn' ? 'তৈরি করেছেন' : 'Developed by'}{' '}
           <a
             href="https://instagram.com/shohailmahmud09"
             target="_blank"
@@ -64,14 +65,9 @@ export const ChatInput = ({ onSendMessage, isProcessing }: ChatInputProps) => {
           </a>
         </span>
         <span>•</span>
-        <a
-          href="https://faridpurzillaschool.edu.bd/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hover:text-foreground transition-colors"
-        >
-          অফিসিয়াল সাইট
-        </a>
+        <span className="text-muted-foreground/70">
+          🔒 {language === 'bn' ? 'কোনো তথ্য সংরক্ষিত হয় না' : 'No data stored'}
+        </span>
       </div>
     </div>
   );
