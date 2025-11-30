@@ -1,0 +1,32 @@
+# Vercel Ignore File
+# Files and directories to exclude from Vercel deployment
+
+# Node modules (will be installed during build)
+node_modules/
+
+# Development files
+*.log
+npm-debug.log*
+.DS_Store
+
+# Environment files
+.env.local
+.env.development.local
+
+# IDE files
+.vscode/
+.idea/
+
+# Git
+.git/
+.gitignore
+
+# Documentation (optional - remove if you want to deploy docs)
+DEPLOYMENT.md
+README.md
+
+# Test files
+**/*.test.ts
+**/*.test.tsx
+**/*.spec.ts
+**/*.spec.tsx
