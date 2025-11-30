@@ -3,15 +3,23 @@ import { Button } from './ui/button';
 
 interface WelcomeMessageProps {
   onSuggestionClick: (suggestion: string) => void;
+  language: 'bn' | 'en';
 }
 
-export const WelcomeMessage = ({ onSuggestionClick }: WelcomeMessageProps) => {
-  const suggestions = [
-    { icon: Landmark, text: 'স্কুলের ইতিহাস', color: 'text-primary' },
-    { icon: Phone, text: 'যোগাযোগের তথ্য', color: 'text-blue-400' },
-    { icon: Users, text: 'বিখ্যাত প্রাক্তন ছাত্র', color: 'text-purple-400' },
-    { icon: Building, text: 'অবকাঠামো ও সুবিধা', color: 'text-amber-400' }
-  ];
+export const WelcomeMessage = ({ onSuggestionClick, language }: WelcomeMessageProps) => {
+  const suggestions = language === 'bn' 
+    ? [
+        { icon: Landmark, text: 'স্কুলের ইতিহাস', color: 'text-primary' },
+        { icon: Phone, text: 'যোগাযোগের তথ্য', color: 'text-blue-400' },
+        { icon: Users, text: 'বিখ্যাত প্রাক্তন ছাত্র', color: 'text-purple-400' },
+        { icon: Building, text: 'অবকাঠামো ও সুবিধা', color: 'text-amber-400' }
+      ]
+    : [
+        { icon: Landmark, text: 'School History', color: 'text-primary' },
+        { icon: Phone, text: 'Contact Information', color: 'text-blue-400' },
+        { icon: Users, text: 'Notable Alumni', color: 'text-purple-400' },
+        { icon: Building, text: 'Infrastructure & Facilities', color: 'text-amber-400' }
+      ];
 
   return (
     <div className="message-enter">
@@ -21,10 +29,12 @@ export const WelcomeMessage = ({ onSuggestionClick }: WelcomeMessageProps) => {
         </div>
         <div className="flex-1 space-y-3">
           <div className="text-foreground text-sm leading-relaxed">
-            <p className="mb-2">আসসালামু আলাইকুম! 👋</p>
+            <p className="mb-2">{language === 'bn' ? 'আসসালামু আলাইকুম! 👋' : 'Assalamu Alaikum! 👋'}</p>
             <p className="text-muted-foreground">
-              আমি <span className="text-primary font-medium">ফরিদপুর জিলা স্কুলের</span> AI সহকারী। 
-              ১৮৪০ সালে প্রতিষ্ঠিত এই ঐতিহ্যবাহী বিদ্যালয় সম্পর্কে আমাকে প্রশ্ন করুন।
+              {language === 'bn' 
+                ? <>আমি <span className="text-primary font-medium">ফরিদপুর জিলা স্কুলের</span> AI সহকারী। ১৮৪০ সালে প্রতিষ্ঠিত এই ঐতিহ্যবাহী বিদ্যালয় সম্পর্কে আমাকে প্রশ্ন করুন।</>
+                : <>I am the AI assistant for <span className="text-primary font-medium">Faridpur Zilla School</span>. Ask me about this prestigious institution established in 1840.</>
+              }
             </p>
           </div>
           
