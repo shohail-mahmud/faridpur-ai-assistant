@@ -194,6 +194,12 @@ const Index = () => {
     }
   }, [messages, isTyping]);
 
+  // Clear conversation history when language changes for privacy
+  useEffect(() => {
+    setMessages([]);
+    setConversationHistory([]);
+  }, [language]);
+
   const callAI = async (message: string, retryCount = 0): Promise<string | null> => {
     const controller = new AbortController();
     const timeout = setTimeout(() => controller.abort(), 30000);
@@ -248,7 +254,9 @@ const Index = () => {
     if (aiResponse) {
       response = aiResponse;
     } else {
-      response = 'দুঃখিত, আমি এই মুহূর্তে উত্তর দিতে পারছি না। অনুগ্রহ করে একটু পরে আবার চেষ্টা করুন। 🙏';
+      response = language === 'bn' 
+        ? 'দুঃখিত, আমি এই মুহূর্তে উত্তর দিতে পারছি না। অনুগ্রহ করে একটু পরে আবার চেষ্টা করুন। 🙏'
+        : 'Sorry, I am unable to respond at the moment. Please try again later. 🙏';
     }
 
     const assistantMessage: Message = { role: 'assistant', content: response };
@@ -287,7 +295,7 @@ const Index = () => {
           {isTyping && <TypingIndicator />}
         </div>
 
-        <ChatInput onSendMessage={handleSendMessage} isProcessing={isProcessing} />
+        <ChatInput onSendMessage={handleSendMessage} isProcessing={isProcessing} language={language} />
       </main>
     </div>
   );
