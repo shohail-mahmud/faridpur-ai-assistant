@@ -7,7 +7,8 @@ All colors MUST be HSL.
 */
 
 @layer base {
-  :root {
+  /* Default Dark Green Theme */
+  :root, .dark-green {
     --background: 0 0% 4%;
     --foreground: 0 0% 95%;
 
@@ -38,14 +39,11 @@ All colors MUST be HSL.
 
     --radius: 0.75rem;
 
-    /* Chat-specific tokens */
     --chat-user-bg: 160 84% 39%;
     --chat-bot-bg: 0 0% 10%;
     --chat-input-bg: 0 0% 7%;
     --chat-input-border: 0 0% 15%;
     --chat-input-focus: 160 84% 39%;
-    
-    /* Typing indicator */
     --typing-dot: 160 84% 60%;
 
     --sidebar-background: 0 0% 98%;
@@ -56,6 +54,166 @@ All colors MUST be HSL.
     --sidebar-accent-foreground: 240 5.9% 10%;
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  /* Light Theme */
+  .light {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 10%;
+
+    --card: 0 0% 98%;
+    --card-foreground: 0 0% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 10%;
+
+    --primary: 160 84% 39%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 10%;
+
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
+
+    --accent: 160 84% 39%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 160 84% 39%;
+
+    --radius: 0.75rem;
+
+    --chat-user-bg: 160 84% 39%;
+    --chat-bot-bg: 0 0% 96%;
+    --chat-input-bg: 0 0% 98%;
+    --chat-input-border: 0 0% 90%;
+    --chat-input-focus: 160 84% 39%;
+    --typing-dot: 160 84% 50%;
+  }
+
+  /* Dark Blue Theme */
+  .dark-blue {
+    --background: 220 30% 5%;
+    --foreground: 220 10% 95%;
+
+    --card: 220 30% 8%;
+    --card-foreground: 220 10% 95%;
+
+    --popover: 220 30% 8%;
+    --popover-foreground: 220 10% 95%;
+
+    --primary: 210 100% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 20% 15%;
+    --secondary-foreground: 220 10% 95%;
+
+    --muted: 220 20% 15%;
+    --muted-foreground: 220 10% 60%;
+
+    --accent: 200 100% 45%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 20% 18%;
+    --input: 220 20% 18%;
+    --ring: 210 100% 50%;
+
+    --radius: 0.75rem;
+
+    --chat-user-bg: 210 100% 50%;
+    --chat-bot-bg: 220 25% 12%;
+    --chat-input-bg: 220 30% 8%;
+    --chat-input-border: 220 20% 18%;
+    --chat-input-focus: 210 100% 50%;
+    --typing-dot: 210 100% 60%;
+  }
+
+  /* Dark Purple Theme */
+  .dark-purple {
+    --background: 280 30% 6%;
+    --foreground: 280 10% 95%;
+
+    --card: 280 30% 9%;
+    --card-foreground: 280 10% 95%;
+
+    --popover: 280 30% 9%;
+    --popover-foreground: 280 10% 95%;
+
+    --primary: 270 80% 55%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 280 20% 15%;
+    --secondary-foreground: 280 10% 95%;
+
+    --muted: 280 20% 15%;
+    --muted-foreground: 280 10% 60%;
+
+    --accent: 290 70% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 280 20% 18%;
+    --input: 280 20% 18%;
+    --ring: 270 80% 55%;
+
+    --radius: 0.75rem;
+
+    --chat-user-bg: 270 80% 55%;
+    --chat-bot-bg: 280 25% 12%;
+    --chat-input-bg: 280 30% 9%;
+    --chat-input-border: 280 20% 18%;
+    --chat-input-focus: 270 80% 55%;
+    --typing-dot: 270 80% 65%;
+  }
+
+  /* Dark Orange Theme */
+  .dark-orange {
+    --background: 20 30% 5%;
+    --foreground: 20 10% 95%;
+
+    --card: 20 30% 8%;
+    --card-foreground: 20 10% 95%;
+
+    --popover: 20 30% 8%;
+    --popover-foreground: 20 10% 95%;
+
+    --primary: 25 95% 53%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 20 20% 15%;
+    --secondary-foreground: 20 10% 95%;
+
+    --muted: 20 20% 15%;
+    --muted-foreground: 20 10% 60%;
+
+    --accent: 35 100% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 20 20% 18%;
+    --input: 20 20% 18%;
+    --ring: 25 95% 53%;
+
+    --radius: 0.75rem;
+
+    --chat-user-bg: 25 95% 53%;
+    --chat-bot-bg: 20 25% 12%;
+    --chat-input-bg: 20 30% 8%;
+    --chat-input-border: 20 20% 18%;
+    --chat-input-focus: 25 95% 53%;
+    --typing-dot: 25 95% 63%;
   }
 }
 
