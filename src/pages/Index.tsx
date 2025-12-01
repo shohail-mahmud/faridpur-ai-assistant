@@ -54,6 +54,17 @@ const getSystemPrompt = (lang: 'bn' | 'en') => lang === 'bn'
 • শিক্ষক: ${SCHOOL_DATA.academic.teachers} জন
 • কর্মচারী: ${SCHOOL_DATA.academic.staff} জন (${SCHOOL_DATA.academic.staffDetails})
 
+👨‍🏫 শিক্ষকমণ্ডলী:
+
+প্রধান শিক্ষক:
+• ${SCHOOL_DATA.teachers.headmaster.nameBn} (${SCHOOL_DATA.teachers.headmaster.name}) - ${SCHOOL_DATA.teachers.headmaster.designationBn}, ${SCHOOL_DATA.teachers.headmaster.shiftBn} শিফট
+
+সিনিয়র শিক্ষক (${SCHOOL_DATA.teachers.seniorTeachers.length} জন):
+${SCHOOL_DATA.teachers.seniorTeachers.map(t => `• ${t.name} - ${t.shiftBn} শিফট`).join("\n")}
+
+সহকারী শিক্ষক (${SCHOOL_DATA.teachers.assistantTeachers.length} জন):
+${SCHOOL_DATA.teachers.assistantTeachers.map(t => `• ${t.name} - ${t.shiftBn} শিফট`).join("\n")}
+
 🏛️ অবকাঠামো:
 • ভবন: ${SCHOOL_DATA.infrastructure.buildings} (${SCHOOL_DATA.infrastructure.adminBuilding}সহ)
 • সুবিধাসমূহ: ${SCHOOL_DATA.infrastructure.facilities.join(", ")}
@@ -136,6 +147,17 @@ ${SCHOOL_DATA.alumni.map(a => `• ${a.name}: ${a.title}`).join("\n")}
 • Students: ${SCHOOL_DATA.academic.studentsEn}
 • Teachers: ${SCHOOL_DATA.academic.teachersEn}
 • Staff: ${SCHOOL_DATA.academic.staffEn} (Office assistants, MLS & Night guards)
+
+👨‍🏫 Teaching Staff:
+
+Headmaster:
+• ${SCHOOL_DATA.teachers.headmaster.name} (${SCHOOL_DATA.teachers.headmaster.nameBn}) - ${SCHOOL_DATA.teachers.headmaster.designation}, ${SCHOOL_DATA.teachers.headmaster.shift} Shift
+
+Senior Teachers (${SCHOOL_DATA.teachers.seniorTeachers.length} teachers):
+${SCHOOL_DATA.teachers.seniorTeachers.map(t => `• ${t.name} - ${t.shift} Shift`).join("\n")}
+
+Assistant Teachers (${SCHOOL_DATA.teachers.assistantTeachers.length} teachers):
+${SCHOOL_DATA.teachers.assistantTeachers.map(t => `• ${t.name} - ${t.shift} Shift`).join("\n")}
 
 🏛️ Infrastructure:
 • Buildings: 8 separate buildings (including a 3-story administrative building)
