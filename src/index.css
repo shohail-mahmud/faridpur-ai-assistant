@@ -58,42 +58,82 @@ All colors MUST be HSL.
 
   /* Light Theme */
   .light {
-    --background: 0 0% 100%;
-    --foreground: 0 0% 10%;
+    --background: 0 0% 98%;
+    --foreground: 0 0% 5%;
 
-    --card: 0 0% 98%;
-    --card-foreground: 0 0% 10%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 5%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 10%;
+    --popover-foreground: 0 0% 5%;
 
     --primary: 160 84% 39%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 0 0% 96%;
-    --secondary-foreground: 0 0% 10%;
+    --secondary: 0 0% 93%;
+    --secondary-foreground: 0 0% 5%;
 
-    --muted: 0 0% 96%;
-    --muted-foreground: 0 0% 45%;
+    --muted: 0 0% 93%;
+    --muted-foreground: 0 0% 35%;
 
     --accent: 160 84% 39%;
     --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84% 60%;
+    --destructive: 0 84% 50%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 90%;
-    --input: 0 0% 90%;
+    --border: 0 0% 88%;
+    --input: 0 0% 88%;
     --ring: 160 84% 39%;
 
     --radius: 0.75rem;
 
     --chat-user-bg: 160 84% 39%;
-    --chat-bot-bg: 0 0% 96%;
-    --chat-input-bg: 0 0% 98%;
-    --chat-input-border: 0 0% 90%;
+    --chat-bot-bg: 0 0% 93%;
+    --chat-input-bg: 0 0% 100%;
+    --chat-input-border: 0 0% 88%;
     --chat-input-focus: 160 84% 39%;
-    --typing-dot: 160 84% 50%;
+    --typing-dot: 160 84% 45%;
+  }
+
+  /* Dark Neutral Theme */
+  .dark {
+    --background: 0 0% 8%;
+    --foreground: 0 0% 95%;
+
+    --card: 0 0% 10%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 0 0% 10%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 0 0% 90%;
+    --primary-foreground: 0 0% 10%;
+
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 0 0% 95%;
+
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 60%;
+
+    --accent: 0 0% 20%;
+    --accent-foreground: 0 0% 95%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 18%;
+    --input: 0 0% 18%;
+    --ring: 0 0% 80%;
+
+    --radius: 0.75rem;
+
+    --chat-user-bg: 0 0% 85%;
+    --chat-bot-bg: 0 0% 12%;
+    --chat-input-bg: 0 0% 10%;
+    --chat-input-border: 0 0% 18%;
+    --chat-input-focus: 0 0% 80%;
+    --typing-dot: 0 0% 70%;
   }
 
   /* Dark Blue Theme */
