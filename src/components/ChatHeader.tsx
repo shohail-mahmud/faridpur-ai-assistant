@@ -1,5 +1,6 @@
-import { GraduationCap, Plus, Languages } from 'lucide-react';
+import { Plus, Languages } from 'lucide-react';
 import { Button } from './ui/button';
+import fzsLogo from '@/assets/fzs-logo.png';
 
 interface ChatHeaderProps {
   onClearChat: () => void;
@@ -12,9 +13,11 @@ export const ChatHeader = ({ onClearChat, language, onLanguageChange }: ChatHead
     <header className="border-b border-border bg-card/50 backdrop-blur-sm sticky top-0 z-50">
       <div className="max-w-2xl mx-auto px-4 py-3 flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <div className="w-9 h-9 bg-primary rounded-lg flex items-center justify-center">
-            <GraduationCap className="w-5 h-5 text-white" />
-          </div>
+          <img 
+            src={fzsLogo} 
+            alt="FZS Logo" 
+            className="w-10 h-10 rounded-full object-cover"
+          />
           <div>
             <h1 className="text-sm font-semibold text-foreground">ফরিদপুর জিলা স্কুল</h1>
             <p className="text-xs text-muted-foreground flex items-center gap-1.5">
