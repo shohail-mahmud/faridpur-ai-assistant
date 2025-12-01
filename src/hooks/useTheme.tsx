@@ -1,6 +1,6 @@
 import { createContext, useContext, useEffect, useState } from 'react';
 
-type Theme = 'dark-green' | 'light' | 'dark-blue' | 'dark-purple' | 'dark-orange';
+type Theme = 'dark-green' | 'dark' | 'light' | 'dark-blue' | 'dark-purple' | 'dark-orange';
 
 type ThemeContextType = {
   theme: Theme;
@@ -17,7 +17,7 @@ export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
 
   useEffect(() => {
     const root = document.documentElement;
-    root.classList.remove('dark-green', 'light', 'dark-blue', 'dark-purple', 'dark-orange');
+    root.classList.remove('dark-green', 'dark', 'light', 'dark-blue', 'dark-purple', 'dark-orange');
     root.classList.add(theme);
     localStorage.setItem('fzs-theme', theme);
   }, [theme]);

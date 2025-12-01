@@ -20,7 +20,8 @@ export const ChatHeader = ({ onClearChat, language, onLanguageChange }: ChatHead
 
   const themes = [
     { value: 'dark-green' as const, label: language === 'bn' ? '🌲 সবুজ' : '🌲 Green', color: 'hsl(160 84% 39%)' },
-    { value: 'light' as const, label: language === 'bn' ? '☀️ আলো' : '☀️ Light', color: 'hsl(0 0% 100%)' },
+    { value: 'dark' as const, label: language === 'bn' ? '🌑 ডার্ক' : '🌑 Dark', color: 'hsl(0 0% 10%)' },
+    { value: 'light' as const, label: language === 'bn' ? '☀️ আলো' : '☀️ Light', color: 'hsl(0 0% 98%)' },
     { value: 'dark-blue' as const, label: language === 'bn' ? '🌊 নীল' : '🌊 Blue', color: 'hsl(210 100% 50%)' },
     { value: 'dark-purple' as const, label: language === 'bn' ? '🌌 বেগুনি' : '🌌 Purple', color: 'hsl(270 80% 55%)' },
     { value: 'dark-orange' as const, label: language === 'bn' ? '🔥 কমলা' : '🔥 Orange', color: 'hsl(25 95% 53%)' },
