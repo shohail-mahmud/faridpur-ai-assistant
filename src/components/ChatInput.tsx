@@ -52,8 +52,8 @@ export const ChatInput = ({ onSendMessage, isProcessing, language = 'bn' }: Chat
           </Button>
         </div>
       </form>
-      <div className="flex items-center justify-center gap-3 mt-3 text-xs text-muted-foreground">
-        <span>
+      <div className="flex items-center justify-center gap-2 sm:gap-3 mt-3 text-[10px] sm:text-xs text-muted-foreground flex-nowrap whitespace-nowrap overflow-x-auto scrollbar-hide">
+        <span className="whitespace-nowrap">
           {language === 'bn' ? 'তৈরি করেছেন' : 'Developed by'}{' '}
           <a
             href="https://instagram.com/shohailmahmud09"
@@ -64,8 +64,8 @@ export const ChatInput = ({ onSendMessage, isProcessing, language = 'bn' }: Chat
             @shohailmahmud09
           </a>
         </span>
-        <span>•</span>
-        <span className="text-muted-foreground/70">
+        <span className="hidden sm:inline">•</span>
+        <span className="text-muted-foreground/70 whitespace-nowrap">
           🔒 {language === 'bn' ? 'কোনো তথ্য সংরক্ষিত হয় না' : 'No data stored'}
         </span>
       </div>
