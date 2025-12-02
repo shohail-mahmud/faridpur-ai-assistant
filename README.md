@@ -88,15 +88,6 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 This project is open source and available under the MIT License.
 
-## 🔗 Links
-
-- [Lovable Project](https://lovable.dev/projects/1180e617-5df1-48d9-83d1-b14f578cfabf)
-- [Documentation](https://docs.lovable.dev/)
-
 ## 🏫 About Faridpur Zilla School
 
 Faridpur Zilla School is one of the oldest and most prestigious educational institutions in Bangladesh, established in 1853. This chatbot serves as a digital information hub for students, parents, and visitors.
-
----
-
-Built with ❤️ using [Lovable](https://lovable.dev)
