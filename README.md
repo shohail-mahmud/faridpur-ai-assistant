@@ -1,73 +1,102 @@
-# Welcome to your Lovable project
+# 🎓 FZS School Chatbot
 
-## Project info
+An intelligent bilingual chatbot for Faridpur Zilla School (FZS) providing instant information about the school in both Bengali and English.
 
-**URL**: https://lovable.dev/projects/1180e617-5df1-48d9-83d1-b14f578cfabf
+![FZS Chatbot](src/assets/fzs-logo.png)
 
-## How can I edit this code?
+## ✨ Features
 
-There are several ways of editing your application.
+- 🌐 **Bilingual Support** - Seamlessly switch between Bengali and English
+- 🎨 **Multiple Themes** - 6 beautiful themes including dark, light, and colorful variants
+- 💬 **Smart Responses** - AI-powered responses with school-specific knowledge
+- 📱 **Responsive Design** - Works perfectly on desktop, tablet, and mobile
+- ⚡ **Fast & Lightweight** - Built with Vite for optimal performance
+- 👨‍🏫 **Comprehensive School Info** - Details about teachers, facilities, history, and more
 
-**Use Lovable**
+## 🚀 Quick Start
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/1180e617-5df1-48d9-83d1-b14f578cfabf) and start prompting.
+### Prerequisites
 
-Changes made via Lovable will be committed automatically to this repo.
+- Node.js 18+ and npm installed ([install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating))
 
-**Use your preferred IDE**
+### Installation
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
+```bash
+# Clone the repository
 git clone <YOUR_GIT_URL>
 
-# Step 2: Navigate to the project directory.
+# Navigate to the project directory
 cd <YOUR_PROJECT_NAME>
 
-# Step 3: Install the necessary dependencies.
-npm i
+# Install dependencies
+npm install
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start the development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+The application will be available at `http://localhost:8080`
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Build for Production
 
-**Use GitHub Codespaces**
+```bash
+npm run build
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+The built files will be in the `dist` directory.
 
-## What technologies are used for this project?
+## 🛠️ Technology Stack
 
-This project is built with:
+- **Framework**: React 18 with TypeScript
+- **Build Tool**: Vite
+- **Styling**: Tailwind CSS
+- **UI Components**: shadcn/ui + Radix UI
+- **Routing**: React Router v6
+- **State Management**: React Hooks
+- **Icons**: Lucide React
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## 🎨 Themes
 
-## How can I deploy this project?
+The chatbot comes with 6 stunning themes:
+- 🌲 Dark Green (Default)
+- 🌑 Dark Neutral
+- ☀️ Light
+- 🌊 Dark Blue
+- 🌌 Dark Purple
+- 🔥 Dark Orange
 
-Simply open [Lovable](https://lovable.dev/projects/1180e617-5df1-48d9-83d1-b14f578cfabf) and click on Share -> Publish.
+## 📁 Project Structure
 
-## Can I connect a custom domain to my Lovable project?
+```
+src/
+├── assets/          # Images and static assets
+├── components/      # React components
+│   ├── ui/         # Reusable UI components (shadcn)
+│   └── ...         # Feature components
+├── data/           # School data and constants
+├── hooks/          # Custom React hooks
+├── pages/          # Page components
+├── utils/          # Utility functions
+└── main.tsx        # Application entry point
+```
 
-Yes, you can!
+## 🤝 Contributing
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+Contributions are welcome! Please feel free to submit a Pull Request.
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+## 📝 License
+
+This project is open source and available under the MIT License.
+
+## 🔗 Links
+
+- [Lovable Project](https://lovable.dev/projects/1180e617-5df1-48d9-83d1-b14f578cfabf)
+- [Documentation](https://docs.lovable.dev/)
+
+## 🏫 About Faridpur Zilla School
+
+Faridpur Zilla School is one of the oldest and most prestigious educational institutions in Bangladesh, established in 1853. This chatbot serves as a digital information hub for students, parents, and visitors.
+
+---
+
+Built with ❤️ using [Lovable](https://lovable.dev)
